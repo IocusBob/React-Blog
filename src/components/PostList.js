@@ -8,6 +8,7 @@ class PostList extends Component {
     }
 
     render() {
+        console.log(this.props.posts)
         return (
             <div>
                 Post List
@@ -16,4 +17,9 @@ class PostList extends Component {
     }
 }
 
-export default connect(null, { fetchPosts })(PostList);
+const mapStateToProps = ({posts}) => {
+    return {posts: posts}
+}
+
+
+export default connect(mapStateToProps, { fetchPosts })(PostList);
