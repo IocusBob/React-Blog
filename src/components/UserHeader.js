@@ -22,7 +22,6 @@ class UserHeader extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state)
     return {user: state.users.find(user => user.id === ownProps.userId)};
 }
 
